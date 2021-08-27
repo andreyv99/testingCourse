@@ -1,0 +1,528 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+  Recognition eCard Generator</title
+><link
+  rel="icon"
+  href="file:///Users/miguel.palacio/OneDrive%20-%20Accenture/AC_REQUEST_MIKE/4687%20webapp%20eCard%20Generator%20Recognition%20HTML%20sharepoint%20-%20Victoria%20Maio/eCard%20HTML%20template/EDITABLE%20MASTER%2020210504/eCard_files/favicon.gif"
+  type="image/gif"
+  sizes="16x16"
+/><style media="screen">
+  /* h1,h2,p {
+      font-family: graphik, arial, sans-serif;
+    } */
+
+  /* @media screen and (min-width: 1300px) {
+      #derecha {
+        display: block;
+        width: 100%;
+        background-color: #a100ff;
+      }
+
+      #eCard {
+        display: block;
+        position: relative;
+      }
+
+      #kinetic {
+      }
+    } */
+
+  body {
+    max-height: 900px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #headline {
+    width: 100%;
+    padding: 20px 20px 0px;
+    display: block;
+  }
+
+  #logoycierre {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+  }
+
+  #ecard {
+    /* position: relative; */
+    display: block;
+
+    width: 650px;
+    min-height: 350px;
+    max-height: 900px;
+    /*box-shadow: -2px 4px 10px rgb(0, 0, 0, 0.4);  d8d8d8 */
+    /* margin: 20px 0 0 20px; */
+  }
+
+  .extras {
+    position: absolute;
+    top: 20vh;
+    transform: translateY(-200px);
+    transform: translateX(-50%);
+    left: 25%;
+  }
+
+  #derecha {
+    /* display: inline-block; */
+    /* max-height: 900px; */
+    /* margin: 20px 0 20px; */
+    width: 50%;
+    height: 100vh;
+    /* background-color: #a100ff; */
+    background: linear-gradient(140deg, #a100ff 30%, #460073 100%);
+    position: absolute;
+    right: 0;
+  }
+
+  #botonera {
+    /* margin-left: 50px; */
+    margin-left: 80px;
+    padding-top: 15vh;
+    top: 52vh;
+    transform: translateY(-50vh);
+    /* width: 700px; */
+    position: absolute;
+  }
+
+  button {
+    /* height: 30px;
+        min-height: 21px;
+        max-height: 31px;
+        max-height: 25px;*/
+
+    box-shadow: 2px 4px 3px rgb(0, 0, 0, 0.1);
+
+    margin-right: 8px;
+    margin-top: 4px;
+    padding: 0px 8px 9px 2px;
+    border-radius: 3px;
+    border: solid 2px #aaa; /*#460073*/
+  }
+
+  button:hover,
+  .btn-violeta:hover {
+    transform: translate(2px, -2px);
+    box-shadow: -2px 3px 5px rgb(0, 0, 0, 0.5); /* d8d8d8 */
+    cursor: pointer;
+    /* border: solid 2px #a100ff; */
+  }
+  /* button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0px 3px 5px rgb(160, 0, 255, 0.2);
+          cursor: pointer;
+          border: solid 2px #a100ff;
+        } */
+
+  button:active {
+    /* transform: translateY(2px); */
+    box-shadow: none;
+    background-color: #460073;
+    color: white;
+    border: black;
+  }
+
+  .btn-violeta {
+    background-color: #460073;
+    border-color: #460073;
+    color: white;
+  }
+
+  .btn-violeta:hover {
+    background-color: #05f0a5;
+    border: 2px solid #a100ff;
+    color: #a100ff;
+  }
+
+  /* button:last-child {
+          background-color: green;
+        } */
+
+  #imagen {
+    width: 350px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  img {
+    max-width: 350px;
+  }
+
+  #imageholder {
+    /* display: inline-block; */
+    float: right;
+    overflow: visible;
+
+    max-width: 350px;
+    width: 350px;
+  }
+
+  i {
+    position: relative;
+    top: 5px;
+    height: 21px;
+    width: 28px;
+    margin-right: 2px;
+    margin-left: 2px;
+    display: inline-block;
+  }
+
+  .ico1,
+  .ico2,
+  .ico3,
+  .ico4,
+  .ico5,
+  .ico6,
+  .ico7,
+  .ico8,
+  .ico9,
+  .ico10,
+  .ico11,
+  .ico12,
+  .ico13 {
+    background-repeat: no-repeat;
+  }
+
+  .ico1 {
+    /* gradient1 */
+    background: url("eCard_files/icons.png") 0 0;
+  }
+  .ico2 {
+    /* gradient1 */
+    background: url("eCard_files/icons.png") -28px 0;
+  }
+  .ico3 {
+    /* gradient1 */
+    background: url("eCard_files/icons.png") -56px 0;
+  }
+  .ico4 {
+    /* gradient1 */
+    background: url("eCard_files/icons.png") -84px 0;
+  }
+  .ico5 {
+    /* nuevo parrafo */
+    background: url("eCard_files/icons.png") -112px 0;
+  }
+  .ico6 {
+    /* color1 */
+    background: url("eCard_files/icons.png") -140px 0;
+  }
+  .ico7 {
+    /* color2 */
+    background: url("eCard_files/icons.png") -168px 0;
+  }
+  .ico8 {
+    /* color3 */
+    background: url("eCard_files/icons.png") -196px 0;
+  }
+  .ico9 {
+    /* color4 */
+    background: url("eCard_files/icons.png") -224px 0;
+  }
+  .ico10 {
+    /* gradient1 */
+    background: url("eCard_files/icons.png") -252px 0;
+  }
+  .ico11 {
+    /* gradient2 */
+    background: url("eCard_files/icons.png") -280px 0;
+  }
+  .ico12 {
+    /* upload */
+    background: url("eCard_files/icons.png") -310px 0;
+  }
+  .ico13 {
+    background: url("eCard_files/icons.png") -336px 0;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .foto01,
+  .foto02,
+  .foto03,
+  .foto04,
+  .foto05,
+  .foto06,
+  .foto07,
+  .foto08,
+  .foto09,
+  .foto10,
+  .foto11,
+  .foto12,
+  .foto13 {
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 300px;
+  }
+
+  .foto01 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-01.png");
+  }
+  .foto02 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-02.png");
+  }
+  .foto03 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-03.png");
+  }
+  .foto04 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-04.png");
+  }
+  .foto05 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-05.png");
+  }
+  .foto06 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-06.png");
+  }
+  .foto07 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-07.png");
+  }
+  .foto08 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-08.png");
+  }
+  .foto09 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-09.png");
+  }
+  .foto10 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-10.png");
+  }
+  .foto11 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-11.png");
+  }
+  .foto12 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-12.png");
+  }
+  .foto13 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/main-image-13.png");
+  }
+
+  .gt01 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gt01.png");
+  }
+  .gt02 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gt02.png");
+  }
+  .gt03 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gt03.png");
+  }
+  .gt04 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gt04.png");
+  }
+
+  .monetary {
+    display: block;
+  }
+  .nonmonetary {
+    display: none;
+  }
+
+  .gradient01 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gradient01.jpg");
+  }
+  .gradient02 {
+    background-image: url("https://prod-maestro-accentureots.azureedge.net/content/gradient02.jpg");
+  }
+
+  table {
+    /* background-color: #EEEEEE; */
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+  }
+
+  table,
+  tr,
+  td {
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+  }
+
+  td:nth-child(0) {
+    padding: 80px 0 0 20px;
+  }
+  td:nth-child(1) {
+    padding: 0 0 0 20px;
+  }
+  td:nth-child(3) {
+    padding: 0 0 0 20px;
+  }
+
+  h2 {
+    display: inline;
+    line-height: 43px;
+  }
+
+  iframe {
+    background-color: #dddddd;
+    color: black;
+  }
+
+  .foto {
+    display: table-cell; /*sino por alguna razon agrega un border;*/
+  }
+
+  #gt {
+    /* position: absolute;
+      bottom: 20px; */
+    height: 30px;
+    width: 30px;
+    margin: 30px 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #textosCuerpo {
+    display: inline-block; /* NEW */
+
+    padding: 20px 20px 60px 20px;
+    color: #ffffff;
+    width: 260px;
+    /* float: left; */
+  }
+
+  /* p, td, img { //elementos no son clickeables
+      pointer-events: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      -webkit-user-select: none !important;
+      user-select: none !important;
+    } */
+
+  /*link si es clickebale*/
+  /* a  {
+      pointer-events: all !important;
+    } */
+
+  #titular {
+    max-height: 20px;
+    font-family: "graphik semibold", arial, sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 43px;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ffffff;
+  }
+
+  #parrafo1,
+  p {
+    font-family: "graphik regular", arial, sans-serif;
+    font-size: 14px;
+  }
+
+  p {
+    font-weight: normal;
+  }
+
+  #signature {
+    width: auto;
+    max-height: 50px;
+    display: inline;
+    /* min-height: 30px; */
+  }
+
+  .bgvioleta {
+    background-color: #460073;
+  }
+  .bgceleste {
+    background-color: #008eff;
+  }
+  .bgblanco {
+    background-color: #ffffff;
+  }
+  .bggris {
+    background-color: #eeeeee;
+  }
+
+  .txtblanco {
+    color: white;
+  }
+  .txtnegro {
+    color: black;
+  }
+  .txtvioleta1 {
+    color: #a100ff;
+  }
+  .txtvioleta2 {
+    color: #460073;
+  }
+  .txtceleste {
+    color: #00baff;
+  }
+  .txtceleste2 {
+    color: #008eff;
+  }
+  .txtceleste3 {
+    color: #004dff;
+  }
+  .negrita {
+    font-family: "graphik semibold", arial, sans-serif;
+    font-weight: bold;
+  }
+
+  #hiRecipient {
+    font-size: 16px;
+    font-family: "graphik semibold", arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ffffff;
+  }
+</style>
+<div style="" class="gradient02" id="ecard">
+  <div style="width: 100%; display: block; position: relative">
+    <div id="headline">
+      <h2 style="color: rgb(255, 255, 255)" id="titular">Your headline here</h2>
+    </div>
+    <div
+      style="
+        position: relative;
+        padding-bottom: 75px;
+        color: rgb(255, 255, 255);
+      "
+      id="textosCuerpo"
+    >
+      <p style="color: rgb(70, 0, 115)" class="txtvioleta2" id="hiRecipient">
+        Hi {{recipient_first_name}},
+      </p>
+      <p id="parrafo1">
+        1st paragraph placeholder. <br />Change the text using the buttons
+        below.
+      </p>
+      <p
+        style="margin: 30px 0 0; font-size: 14px"
+        class="monetary"
+        id="monetaryornot"
+      >
+        You were awarded {{award_amount}} Appreciation Points.
+      </p>
+      <p style="margin: 30px 0 35px; font-size: 14px">{{initiator_comments}}</p>
+      <p><br /></p>
+    </div>
+    <div style="padding: 30px 0px 0px; vertical-align: bottom" id="imageholder">
+      <div style="display: table-cell" class="foto03" id="imagen"></div>
+    </div>
+    <div id="logoycierre">
+      <p style="margin-top: 0; font-size: 12px">
+        <span style="color: rgb(70, 0, 115)" id="cierre"
+          >Discover more about</span
+        >
+        <br /><a
+          style="color: rgb(161, 0, 255)"
+          id="cta"
+          href="https://recognition.accenture.com/"
+          target="_blank"
+          ><strong>Whole Self Recognition</strong></a
+        >
+      </p>
+      <div class="gt02" id="gt"></div>
+    </div>
+  </div>
+</div>
